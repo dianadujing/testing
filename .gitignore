@@ -3,3 +3,5 @@ node_modules
 coverage.html
 node-jscoverage
 npm-debug.log
+selenium-example
+.DS_Store
