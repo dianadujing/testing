@@ -2,3 +2,4 @@ test
 node_modules
 coverage.html
 node-jscoverage
+npm-debug.log
