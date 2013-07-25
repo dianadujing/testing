@@ -1,0 +1,28 @@
+{
+  "name": "testing",
+  "version": "0.0.0",
+  "description": "Testing automation",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "test",
+    "automation",
+    "tools"
+  ],
+  "repository": "git://github.com/dianadujing/testing",
+  "author": "Diana Du",
+  "license": "BSD",
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "grunt",
+    "travis-cov": {
+      "threshold": 100
+    }
+  }
+}
