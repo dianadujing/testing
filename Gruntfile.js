@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         options: {
           reporter: 'spec'
         },
-        src: ['tests/*.js']
+        src: ['tests/asapTest.js']
       },
       'html-cov': {
         options: {
@@ -16,13 +16,13 @@ module.exports = function(grunt) {
           quiet: true,
           captureFile: 'coverage.html'
         },
-        src: ['tests/*.js']
+        src: ['tests/asapTest.js']
       },
       'travis-cov': {
         options: {
           reporter: 'travis-cov'
         },
-        src: ['tests/*.js']
+        src: ['tests/asapTest.js']
       }
     }
   });
