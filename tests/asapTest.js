@@ -1,6 +1,7 @@
 var should = require('should')
    ,assert = require('assert')
    ,expect = require('expect.js')
+   //,cheerio = require('cheerio')
    ,myCode = require('../asap/asap.js');
 describe('ASAP library ', function(){
   describe('asap ', function(){
@@ -15,10 +16,6 @@ describe('ASAP library ', function(){
     })
     it('should have registry', function(){
     })
-    describe('loadScript', function(){
-      it('should run', function(){
-        //myCode.asap.loadScript('http://www.ae.com/web/index.jsp','id').should.be.a(null);
-      })
-    })
+
   })
 })

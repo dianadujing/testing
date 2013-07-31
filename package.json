@@ -6,9 +6,17 @@
   "dependencies": {
     "grunt": "~0.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "grunt-mocha-phantomjs": "~0.3.0"
+  },
   "scripts": {
-    "test": "grunt"
+    "prepublish": "npm prune",
+    "test": "grunt",
+    "travis-cov": {
+      "threshold": 100
+    }
   },
   "keywords": [
     "test",
@@ -17,12 +25,5 @@
   ],
   "repository": "git://github.com/dianadujing/testing",
   "author": "Diana Du",
-  "license": "BSD",
-  "scripts": {
-    "prepublish": "npm prune",
-    "test": "grunt",
-    "travis-cov": {
-      "threshold": 100
-    }
-  }
+  "license": "BSD"
 }

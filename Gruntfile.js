@@ -1,8 +1,7 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-mocha-test');
-
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     mochaTest: {
       test: {
         options: {
@@ -24,8 +23,14 @@ module.exports = function(grunt) {
         },
         src: ['tests/asapTest.js']
       }
-    }
+    },
+    mocha_phantomjs: {
+    all: ['mocha_phantomjs_html/*.html']
+    },
   });
+  grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-mocha-phantomjs');
 
-  grunt.registerTask('default', 'mochaTest');
+  grunt.registerTask('default', ['mocha_phantomjs','mochaTest','mocha_phantomjs']);
+  //grunt.registerTask('default');
 };
