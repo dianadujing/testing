@@ -31,6 +31,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-mocha-phantomjs');
 
-  grunt.registerTask('default', ['mocha_phantomjs','mochaTest','mocha_phantomjs']);
+  grunt.registerTask('default', ['mocha_phantomjs','mochaTest']);
   //grunt.registerTask('default');
 };
