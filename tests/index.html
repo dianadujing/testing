@@ -10,9 +10,11 @@
     <script>
       mocha.ui('bdd');
       mocha.reporter('html');
-      var expect = chai.expect;
+      // var expect = chai.expect;
+      chai.should();
     </script>
-    <script src="../tests/asapDOMTest.js"></script>
+    <script src="../asap/asap.js"></script>
+    <script src="asapDOMTest.js"></script>
     <script>
       if(window.mochaPhantomJS)
       {
