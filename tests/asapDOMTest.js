@@ -13,13 +13,16 @@ describe('asap', function(){
 
   describe('resolve and then - ', function(){
     var asap_result = asap(node1.id).resolve();
+    var properties = ['resolve','then'];
 
-    it(' resolve should be an object', function(){
-      (asap_result).should.be.a('object');
+    it(' resolve should return api back', function(){
+      for(var i=0;i<properties.length;i++){
+        (asap_result).should.be.a('object').and.have.property(properties[i]);
+      }
     });
 
     it(' should return the same api object: ', function(){
-        (asap_result.resolve()).should.be.equal(asap_result);
+      (asap_result.resolve()).should.be.equal(asap_result);
     });
 
     it(' then() should work after resolve(): ', function(){
