@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 describe('asap', function(){
 
   asap.loadScript('/coverage.html','node1');
@@ -35,14 +34,3 @@ describe('asap', function(){
       });
     });
 
-=======
-describe('loadScript', function(){
-  it('should assign load a new script: ', function(){
-    asap.loadScript('coverage.html','abc');
-    var scrpt = document.getElementById('abc');
-    (scrpt.id).should.equal('abc');
-    console.log(scrpt.src);
-    console.log(scrpt.id);
->>>>>>> 5fbed65ad194a849c195ee227750df6eff5e3fe7
-  });
-});
