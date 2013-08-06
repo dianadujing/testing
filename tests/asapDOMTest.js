@@ -1,20 +1,26 @@
 describe('asap', function(){
 
-  asap.loadScript('/sourcejs/clock.js','node1');
-  var node1 = document.getElementById('node1');
-  asap.loadScript('/sourcejs/clock.js','node2');
-  var node2 = document.getElementById('node2');
-
   describe('loadScript', function(){
     it(' should assign value to variables: ', function(){
+      asap.loadScript('/sourcejs/clock.js','node1');
+      var node1 = document.getElementById('node1');
+      asap.loadScript('/sourcejs/clock.js','node2');
+      var node2 = document.getElementById('node2');
       (node1.id).should.equal('node1');
     });
   });
 
   describe('resolve and then - ', function(){
+    var flag = false;
+    it(' then() should not work before resolve() has been called ', function(){
+      asap('clock1').then(function(){
+        flag = true;
+      });
+      flag.should.be.false;
+    });
+
     var asap_result = asap('clock').resolve();
     var properties = ['resolve','then'];
-
     it(' resolve should return api back', function(){
       for(var i=0;i<properties.length;i++){
         (asap_result).should.be.a('object').and.have.property(properties[i]);
@@ -36,12 +42,6 @@ describe('asap', function(){
       });
       (document.getElementById('txt').innerText).should.equal('then() succeed!')
     });
-
-    /*it(' then() cannot work before resolve(): ', function(){
-      asap('').then(function(){
-        console.log('failed!');
-      });
-    });*/
-    });
+  });
 
 });
