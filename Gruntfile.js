@@ -17,6 +17,7 @@ module.exports = function(grunt) {
         },
         src: ['tests/asapTest.js']
       }
+<<<<<<< HEAD
       /*,
       'travis-cov': {
         options: {
@@ -28,6 +29,19 @@ module.exports = function(grunt) {
     mocha_phantomjs: {
     all: ['tests/*.html']
     },
+=======
+      // ,
+      // 'travis-cov': {
+      //   options: {
+      //     reporter: 'travis-cov'
+      //   },
+      //   src: ['tests/asapTest.js']
+      // }
+    },
+    mocha_phantomjs: {
+      all: ['tests/*.html']
+    }
+>>>>>>> 5fbed65ad194a849c195ee227750df6eff5e3fe7
   });
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-mocha-phantomjs');

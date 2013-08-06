@@ -8,7 +8,11 @@
   },
   "devDependencies": {
     "mocha": "*",
+<<<<<<< HEAD
     "chai": "*",
+=======
+    "chai": "~1.7.2",
+>>>>>>> 5fbed65ad194a849c195ee227750df6eff5e3fe7
     "grunt-mocha-phantomjs": "~0.3.0",
     "grunt-mocha-test": "~0.6.2",
     "should": "~1.2.2",
