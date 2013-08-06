@@ -9,7 +9,11 @@
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "grunt-mocha-phantomjs": "~0.3.0"
+    "grunt-mocha-phantomjs": "~0.3.0",
+    "grunt-mocha-test": "~0.6.2",
+    "should": "~1.2.2",
+    "expect": "0.0.2",
+    "expect.js": "~0.2.0"
   },
   "scripts": {
     "prepublish": "npm prune",

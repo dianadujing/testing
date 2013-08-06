@@ -16,16 +16,17 @@ module.exports = function(grunt) {
           captureFile: 'coverage.html'
         },
         src: ['tests/asapTest.js']
-      },
+      }
+      /*,
       'travis-cov': {
         options: {
           reporter: 'travis-cov'
         },
         src: ['tests/asapTest.js']
-      }
+      }*/
     },
     mocha_phantomjs: {
-    all: ['mocha_phantomjs_html/*.html']
+    all: ['tests/*.html']
     },
   });
   grunt.loadNpmTasks('grunt-mocha-test');
