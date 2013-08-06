@@ -1,8 +1,8 @@
 describe('asap', function(){
 
-  asap.loadScript('/coverage.html','node1');
+  asap.loadScript('/sourcejs/clock.js','node1');
   var node1 = document.getElementById('node1');
-  asap.loadScript('/coverage.html','node2');
+  asap.loadScript('/sourcejs/clock.js','node2');
   var node2 = document.getElementById('node2');
 
   describe('loadScript', function(){
@@ -12,7 +12,7 @@ describe('asap', function(){
   });
 
   describe('resolve and then - ', function(){
-    var asap_result = asap(node1.id).resolve();
+    var asap_result = asap('clock').resolve();
     var properties = ['resolve','then'];
 
     it(' resolve should return api back', function(){
@@ -26,16 +26,22 @@ describe('asap', function(){
     });
 
     it(' then() should work after resolve(): ', function(){
-      asap(node1.id).then(function(){
-        console.log('succeed!');
+      asap('clock').then(function(){
+        var div_clock = document.createElement('div');
+        div_clock.setAttribute('id','txt');
+        div_clock.innerText = 'then() succeed!';
+        var mocha_node = document.getElementById('mocha');
+        mocha_node.parentNode.insertBefore(div_clock,mocha_node);
+        //document.getElementsByTagName("body")[0].setAttribute("onload","startTime()");
       });
+      (document.getElementById('txt').innerText).should.equal('then() succeed!')
     });
 
-    it(' then() cannot work before resolve(): ', function(){
-      asap(node2.id).then(function(){
+    /*it(' then() cannot work before resolve(): ', function(){
+      asap('').then(function(){
         console.log('failed!');
       });
+    });*/
     });
 
-  });
 });
